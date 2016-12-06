@@ -7,6 +7,10 @@ class BooksController < BlocWorks::Controller
     render :index, books: Book.all
   end
 
+  def show
+    render :index, books: Book.first
+  end
+
   def new
   end
 
