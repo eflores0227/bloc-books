@@ -8,7 +8,8 @@ class BooksController < BlocWorks::Controller
   end
 
   def show
-    render :index, books: Book.first
+    book = Book.find(params['id'])
+    render :show, book: book
   end
 
   def new
